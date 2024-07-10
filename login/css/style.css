@@ -1,0 +1,243 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root{
+    --main-color:#7461f1;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.btn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+   border: none;
+   outline: none;
+   background-color: var(--main-color);
+   color: white;
+   padding: 10px 15px;
+   border-radius: 15px;
+   -webkit-border-radius: 15px;
+   -moz-border-radius: 15px;
+   -ms-border-radius: 15px;
+   -o-border-radius: 15px;
+}
+
+/*design the container*/
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 100vh;
+
+}
+
+
+/*start design the leftSide*/
+
+.container .leftSide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    width: 100%;
+}
+.container .leftSide .headerTitle{
+    padding-bottom: 15px;
+}
+.container .leftSide .headerTitle h1{
+    text-transform:uppercase ;
+}
+.container .leftSide .headerTitle p{
+    padding-top: 10px;
+    color: rgb(126, 126, 126);
+    text-transform: capitalize;
+}
+
+
+.container .leftSide .inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    margin: 5px;
+    width: 350px;
+    background-color: #f3f1ff;
+    padding: 14px 20px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+
+.container .leftSide .inputs input{
+    width: 100%;
+    display: flex;
+    align-items:flex-start;
+    outline: none;
+    border: none;
+    background-color: #f3f1ff;
+    padding-left: 10px;
+}
+
+
+input::placeholder {
+    font-family: 'Arial', sans-serif; 
+    font-size: 13px;
+    font-weight: bold;
+    color: #6f6f6f; 
+    text-transform: capitalize;
+}
+
+.container .leftSide  .btn{
+    margin: 15px;
+    padding: 17px 23px;
+    font-weight: bold;
+    font-size: 13px;
+}
+.container .leftSide .moreOptions .other{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-transform: capitalize;
+    position: relative;
+
+}
+
+.container .leftSide .moreOptions .other::after, .moreOptions .other::before{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #e0d3ff;
+    position: absolute;
+    top: 50%;
+}
+
+.container .leftSide .moreOptions .other::before {
+    left: 0;
+}
+.container .leftSide .moreOptions .other::after {
+    right: 0;
+}
+
+
+.container .leftSide .moreOptions .socail {
+    width: 350px;
+    border: .5px solid rgb(209, 209, 209);
+    border-radius: 17px;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    -ms-border-radius: 17px;
+    -o-border-radius: 17px;
+    margin: 10px;
+}
+.container .leftSide .moreOptions .socail a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    font-weight: 100;
+}
+.container .leftSide .moreOptions .socail a img{
+   width: 60px;
+    padding-right: 10px;
+}
+
+
+.container .leftSide .moreOptions .socail:first-child  a {
+    border: 2px solid orange;
+  font-size: 25px;
+    color: red; 
+ }
+  
+
+/*end design the leftSide*/
+
+
+/*start design the rightSide*/
+.container .rightSide{
+    background-color: #7461f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    position: relative;
+}
+.container .rightSide .box{    
+    background-color: #c1baf54b;
+    width: 400px;
+    height: 500px;
+    padding: 30px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    text-transform: capitalize;
+    position: relative;
+    border: 1px solid white;
+}
+
+.container .rightSide .box p{
+    font-size: 35px;
+    width: 80%;
+    font-weight: 800;
+    padding-right: 14px;
+}
+
+.container .rightSide .box img{
+    width: 300px;
+    position: absolute;
+    bottom: -10px;
+    right: -60px;
+}
+
+.container .rightSide .icon{
+   position: absolute;
+   background-color: #ffffff;
+   bottom: 200px;
+   left: 150px;
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   -ms-border-radius: 50%;
+   -o-border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.container .rightSide .icon .light{
+   width: 35px;
+
+}
+
+/*end design the rightSide*/
+
+
+@media only screen and (max-width: 450px) {
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    
+    }
+  }
